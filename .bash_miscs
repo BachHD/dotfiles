@@ -1,0 +1,34 @@
+# Aliases
+alias sbrc="source ~/.bashrc"
+
+
+# Command promt:
+function make_color_promt {
+    local __user_and_host="\[\e[36m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\]:"
+    local __cur_loc="\w"
+    local __promt_tail="\[\e[33m\]\\$\[\e[m\]\n \[\e[32m\]↳ \[\e[m\]"
+    export PS1="$__user_and_host$__cur_general_loc$__cur_loc$__promt_tail"
+}
+
+make_color_promt
+
+# Title
+title_list[0]="༼ つ ◕_◕ ༽つ"
+title_list[1]="¯\\\_(ツ)_/¯"
+title_list[2]="f(ಠ‿↼)z"
+title_list[3]="༼つಠ益ಠ༽つ ─=≡ΣO))"
+title_list[4]="c(ˊᗜˋ*c)"
+title_list[5]="ʕノ•ᴥ•ʔノ ︵ ┻━┻"
+title_list[6]="(^◔ᴥ◔^)"
+title_list[7]="ʕ •ᴥ• ʔ"
+title_list[8]="(＃￣□￣)o━∈・・━━━━☆"
+title_list[9]="( ˘▽˘)っ♨"
+title_list[10]="‿︵‿︵‿︵‿ヽ(°□° )ノ︵‿︵‿︵‿︵"
+title_list[11]="_(:3 」∠)_"
+
+rand=$[ $RANDOM % ${#title_list[@]} ]
+title=${title_list[$rand]}
+
+ORIG=$PS1
+TITLE="\[\e]2;$title\a\]"
+PS1=${ORIG}${TITLE}
