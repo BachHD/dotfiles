@@ -4,7 +4,7 @@ cd ${WORKDIR}
 
 ## Installation
 sudo apt-get update
-sudo apt-get install -y tmux
+sudo apt-get install -y tmux ripgrep
 
 ## Estabilising configs
 ln -svf "${WORKDIR}/.bash_profile" ~
