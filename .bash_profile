@@ -4,6 +4,6 @@ for file in ~/.{bashrc,bash_miscs}; do
 done;
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d "~/.local/bin" ] ; then
+    PATH="~/.local/bin:$PATH"
 fi
