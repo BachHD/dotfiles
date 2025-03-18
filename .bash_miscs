@@ -1,5 +1,5 @@
 # Aliases
-alias sbrc="source ~/.bashrc"
+alias reload="source ~/.bashrc"
 
 
 # Command promt:
