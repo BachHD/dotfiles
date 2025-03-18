@@ -6,8 +6,7 @@ cd ${WORKDIR}
 sudo apt-get update
 sudo apt-get install -y tmux
 
-## Sourcing
-source .bash_miscs
-
 ## Estabilising configs
+ln -svf "${WORKDIR}/.bash_profile" ~
+ln -svf "${WORKDIR}/.bash_miscs" ~
 ln -svf "${WORKDIR}/.tmux.conf" ~
