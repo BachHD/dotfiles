@@ -3,11 +3,11 @@ WORKDIR=$(dirname $(realpath "$0"))
 cd ${WORKDIR}
 
 ## Installation
-sudo apt update
-sudo apt install -y tmux
+sudo apt-get update
+sudo apt-get install -y tmux
 
 ## Sourcing
-source ./.bash_miscs
+source .bash_miscs
 
 ## Estabilising configs
-ln -sv "${WORKDIR}/.tmux.conf" ~
+ln -svf "${WORKDIR}/.tmux.conf" ~
